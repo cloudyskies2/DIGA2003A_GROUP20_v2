@@ -19,10 +19,15 @@ public class playerController1 : MonoBehaviour
     public float radius;
     public LayerMask enemies;
 
+    private Animator animator;
+
+
     void Start()
     {
         Player1 = this.gameObject;
+        animator = GetComponent<Animator>(); //Get the animator component attached to the player
 
+ 
     }
 
     void MovePlayer()
@@ -46,6 +51,10 @@ public class playerController1 : MonoBehaviour
             movePosition.x += 1; //(+1 ; 0 ; 0)
         }
         Player1.transform.position += movePosition.normalized  * moveSpeed * Time.deltaTime;
+
+        animator.SetFloat("MoveX", movePosition.x); //Set the x value of the animator
+        animator.SetFloat("MoveY", movePosition.y); //Set the y value of the animator
+
     }
 
     void Update()

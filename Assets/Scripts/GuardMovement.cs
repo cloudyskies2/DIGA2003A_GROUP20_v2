@@ -13,10 +13,13 @@ public class GuardMovement : MonoBehaviour
     public int point;
     public Transform[] patrolPoint;
 
+    private Animator animator;
 
     void Start()
     {
         point = 0;
+
+        animator = GetComponent<Animator>();
     }
 
 
@@ -26,6 +29,11 @@ public class GuardMovement : MonoBehaviour
         {
             changePointInt();
         }
+
+
+        float movex = patrolPoint[point].position.x - transform.position.x;
+
+        animator.SetFloat("MoveX", movex);
 
         transform.position = Vector3.MoveTowards(transform.position, patrolPoint[point].position, speed * Time.deltaTime);
     }

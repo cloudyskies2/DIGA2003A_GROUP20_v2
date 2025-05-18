@@ -13,9 +13,11 @@ public class EnemyMovement : MonoBehaviour
     public float speed;
 
     private float distance;
+    private Animator animator;
+
     void Start()
     {
-        
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -29,7 +31,15 @@ public class EnemyMovement : MonoBehaviour
         if(distance < 4)
         {
             transform.position = Vector2.MoveTowards(this.transform.position, Player.transform.position, speed * Time.deltaTime);
-            transform.rotation = Quaternion.Euler(Vector3.forward * angle);
+           
+
+            animator.SetFloat("MoveX", direction.x);
+            animator.SetFloat("MoveY", direction.y);
+        }
+        else
+        {
+            animator.SetFloat("MoveX", 0);
+            animator.SetFloat("MoveY", 0);
         }
     }
 }
