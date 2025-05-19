@@ -21,6 +21,7 @@ public class playerController1 : MonoBehaviour
 
     private Animator animator;
 
+    //public ParticleSystem dustEffect;
 
     void Start()
     {
@@ -37,29 +38,35 @@ public class playerController1 : MonoBehaviour
         if(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
         {
             movePosition.y += 1; //(0 ; 1 ; 0)
+            //dustEffect.Play();
         }
         if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
         {
             movePosition.y -= 1; //(0 ; -1 ; 0)
+            //dustEffect.Play();
         }
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
             movePosition.x -= 1; //(-1 ; 0 ; 0)
+            //dustEffect.Play();
         }
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
             movePosition.x += 1; //(+1 ; 0 ; 0)
+            //dustEffect.Play();
         }
         Player1.transform.position += movePosition.normalized  * moveSpeed * Time.deltaTime;
 
         animator.SetFloat("MoveX", movePosition.x); //Set the x value of the animator
         animator.SetFloat("MoveY", movePosition.y); //Set the y value of the animator
 
+        
     }
 
     void Update()
     {
         MovePlayer(); //A function
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
