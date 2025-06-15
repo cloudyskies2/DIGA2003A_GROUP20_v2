@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class SoundEffectLibrary : MonoBehaviour
 
+//Title: Add a Sound Effect Manager to Your Game - 2D Platformer Unity #26
+//Author: Game Code Library
+//Date: 14 June 2025
+//Code Version: Unity 6000.0.40f1
+//Availability: https://www.youtube.com/watch?v=rAX_r0yBwzQ&t=14s
+
 
 {
     [SerializeField] private SoundEffectGroup[] soundEffectGroups;  

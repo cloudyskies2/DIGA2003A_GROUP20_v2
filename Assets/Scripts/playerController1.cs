@@ -20,6 +20,8 @@ public class playerController1 : MonoBehaviour
     public LayerMask enemies;
 
     private Animator animator;
+    private bool playingRunconcrete = false; // To check if the player is running on concrete or not
+    public float footstepSpeed = 0.5f;
 
     //public ParticleSystem dustEffect;
 
@@ -60,7 +62,23 @@ public class playerController1 : MonoBehaviour
         animator.SetFloat("MoveX", movePosition.x); //Set the x value of the animator
         animator.SetFloat("MoveY", movePosition.y); //Set the y value of the animator
 
-        
+
+        //Title: Add Sound Effects to Your Game! - Top Down Unity 2D #18
+        //Author: Game Code Library
+        //Date: 14 June 2025
+        //Code Version: Unity 6000.0.40f1
+        //Availability: https://www.youtube.com/watch?v=RgUA6hGnrF8&t=147s
+
+        bool isMoving = movePosition != Vector3.zero;
+
+        if (isMoving && !playingRunconcrete)
+        {
+            StartRunconcrete();
+        }
+        else if (!isMoving && playingRunconcrete)
+        {
+            StopRunconcrete();
+        }
     }
 
     void Update()
@@ -92,4 +110,29 @@ public class playerController1 : MonoBehaviour
 
         }
     }
+
+
+    //Title: Add Sound Effects to Your Game! - Top Down Unity 2D #18
+    //Author: Game Code Library
+    //Date: 14 June 2025
+    //Code Version: Unity 6000.0.40f1
+    //Availability: https://www.youtube.com/watch?v=RgUA6hGnrF8&t=147s
+
+    void StartRunconcrete()
+    {
+        playingRunconcrete = true;
+        InvokeRepeating(nameof(PlayRunconcrete), 0f, footstepSpeed);
+    }
+
+    void StopRunconcrete()
+    {
+        playingRunconcrete = false;
+        CancelInvoke(nameof(PlayRunconcrete));
+    }
+
+    void PlayRunconcrete()
+    {
+        SoundEffectManager.Play("runconcrete");
+    }
+
 }
