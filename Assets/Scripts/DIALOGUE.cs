@@ -3,6 +3,9 @@ using TMPro;
 using System.Collections;
 using System.Collections.Generic;
 
+//Reference 
+//https://youtu.be/8oTYabhj248?si=Szt7WsrrCD-3ba99
+
 public class DIALOGUE : MonoBehaviour
 {
     public TextMeshProUGUI textComponent;

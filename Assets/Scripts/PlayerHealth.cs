@@ -1,6 +1,9 @@
 using JetBrains.Annotations;
 using UnityEngine;
 
+//Reference 
+//https://youtu.be/tBj-FWcIwYw?si=735sqa47eYTRnVa6
+
 public class PlayerHealth : MonoBehaviour
 {
     public int health;
