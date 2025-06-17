@@ -7,9 +7,9 @@ public class playerAttackArea : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.GetComponent<PlayerHealth>() !=null)
+        if(collision.GetComponent<enemyBehaviour>() !=null)
         {
-            PlayerHealth health = collision.GetComponent<PlayerHealth>();
+            enemyBehaviour health = collision.GetComponent<enemyBehaviour>();
             health.TakeDamage(damage);
         }
     }
