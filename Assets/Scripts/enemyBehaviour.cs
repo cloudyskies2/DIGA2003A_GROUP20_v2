@@ -21,4 +21,11 @@ public class enemyBehaviour : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Player" && Input.GetKeyUp(KeyCode.Q))
+        {
+             TakeDamage(Hitpoints);
+        }
+    }
 }

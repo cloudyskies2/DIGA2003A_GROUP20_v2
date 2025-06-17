@@ -98,6 +98,14 @@ public class playerController1 : MonoBehaviour
         }
     }
 
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "Key")
+        {
+            keyCount -= keyCount;
+        }
+    }
+
     //Title: 2D Melee Combat Unity Tutorial
     //Author: MoreBBlakeyyy
     //Date: 21 April 2025
