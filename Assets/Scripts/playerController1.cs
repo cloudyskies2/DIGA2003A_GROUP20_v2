@@ -17,8 +17,16 @@ public class playerController1 : MonoBehaviour
 
     //public GameObject attackStrike;
     //public float radius;
+<<<<<<< Updated upstream
     //public LayerMask enemy;
     //public GameObject EnemyHealth;
+=======
+    public LayerMask enemy;
+    //public GameObject EnemyHealth;
+
+    //public enemyHealthController someclass;
+
+>>>>>>> Stashed changes
 
 <<<<<<< Updated upstream
 =======
@@ -55,7 +63,10 @@ public class playerController1 : MonoBehaviour
 
         Player1.transform.position += movePosition.normalized  * moveSpeed * Time.deltaTime;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 
         //Debug.DrawRay(gameObject.transform.position, Vector2.up * 2, Color.red);
         //RaycastHit2D enemyInfo = Physics2D.Raycast(gameObject.transform.position, Vector2.up, 2f, enemy);
@@ -64,13 +75,20 @@ public class playerController1 : MonoBehaviour
         {
             
         }*/
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     }
 
     void Update()
     {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         MovePlayer(); //A function
+=======
+        MovePlayer(); //A function      
+>>>>>>> Stashed changes
 =======
         MovePlayer(); //A function      
 >>>>>>> Stashed changes
@@ -102,7 +120,11 @@ public class playerController1 : MonoBehaviour
 
         }
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     }
+=======
+    }*/
+>>>>>>> Stashed changes
 =======
     }*/
 >>>>>>> Stashed changes
