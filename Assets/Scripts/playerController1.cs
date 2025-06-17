@@ -17,7 +17,7 @@ public class playerController1 : MonoBehaviour
     private int keyCount = 0;
     public TMP_Text keyTextCount;
 
-    public GameObject attackStrike;
+    //public GameObject attackStrike;
     public float radius;
     public LayerMask enemies;
 
@@ -103,7 +103,7 @@ public class playerController1 : MonoBehaviour
     //Date: 21 April 2025
     //Code Version: 2020.3.25f1 (Unity version)
     //Availability:https://www.youtube.com/watch?v=rwO3TE1G3ag&t=521s
-    public void attack()
+    /*public void attack()
     {
         Collider2D[] enemy = Physics2D.OverlapCircleAll(attackStrike.transform.position, radius, enemies);
 
@@ -111,7 +111,7 @@ public class playerController1 : MonoBehaviour
         {
 
         }
-    }
+    }*/
 
 
     //Title: Add Sound Effects to Your Game! - Top Down Unity 2D #18

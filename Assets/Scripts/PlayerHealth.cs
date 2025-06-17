@@ -12,6 +12,8 @@ public class PlayerHealth : MonoBehaviour
     public SpriteRenderer playerSr;
     public playerController1 playerMovement;
 
+    public GameManagerScrpt gameManager;
+    private bool isDead;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -22,8 +24,11 @@ public class PlayerHealth : MonoBehaviour
     public void TakeDamage(int amount)
     {
         health -= amount; 
-        if(health <= 0)
+        if(health <= 0 && !isDead)
         {
+            isDead = true;
+            gameManager.gameOver();
+
             playerSr.enabled = false;
             playerMovement.enabled = false;
         }
