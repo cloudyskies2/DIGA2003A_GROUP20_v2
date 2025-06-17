@@ -15,10 +15,17 @@ public class playerController1 : MonoBehaviour
     private int keyCount = 0;
     public TMP_Text keyTextCount;
 
-    public GameObject attackStrike;
-    public float radius;
-    public LayerMask enemies;
+    //public GameObject attackStrike;
+    //public float radius;
+    //public LayerMask enemy;
+    //public GameObject EnemyHealth;
 
+<<<<<<< Updated upstream
+=======
+    //public enemyHealthController someclass;
+
+
+>>>>>>> Stashed changes
     void Start()
     {
         Player1 = this.gameObject;
@@ -45,12 +52,28 @@ public class playerController1 : MonoBehaviour
         {
             movePosition.x += 1; //(+1 ; 0 ; 0)
         }
+
         Player1.transform.position += movePosition.normalized  * moveSpeed * Time.deltaTime;
+<<<<<<< Updated upstream
+=======
+
+        //Debug.DrawRay(gameObject.transform.position, Vector2.up * 2, Color.red);
+        //RaycastHit2D enemyInfo = Physics2D.Raycast(gameObject.transform.position, Vector2.up, 2f, enemy);
+
+        /*if (Input.GetKey(KeyCode.Q) && enemyInfo.collider == true)
+        {
+            
+        }*/
+>>>>>>> Stashed changes
     }
 
     void Update()
     {
+<<<<<<< Updated upstream
         MovePlayer(); //A function
+=======
+        MovePlayer(); //A function      
+>>>>>>> Stashed changes
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -62,12 +85,15 @@ public class playerController1 : MonoBehaviour
         }
     }
 
+  
+
     //Title: 2D Melee Combat Unity Tutorial
     //Author: MoreBBlakeyyy
     //Date: 21 April 2025
     //Code Version: 2020.3.25f1 (Unity version)
     //Availability:https://www.youtube.com/watch?v=rwO3TE1G3ag&t=521s
-    public void attack()
+
+    /*public void attack()
     {
         Collider2D[] enemy = Physics2D.OverlapCircleAll(attackStrike.transform.position, radius, enemies);
 
@@ -75,5 +101,9 @@ public class playerController1 : MonoBehaviour
         {
 
         }
+<<<<<<< Updated upstream
     }
+=======
+    }*/
+>>>>>>> Stashed changes
 }
